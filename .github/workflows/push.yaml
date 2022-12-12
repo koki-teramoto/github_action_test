@@ -1,0 +1,10 @@
+name: workflow-name
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Greeting
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Hello World
+        run: echo "Hello World"
