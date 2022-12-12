@@ -1,0 +1,13 @@
+name: execution_test
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: execution_test
+    runs-on: ubuntu-20.04
+    steps:
+      - name: execution_test1
+        run: go run execution.go
+
+      - name: execution_test2
+        run: go run exec/execution2.go
