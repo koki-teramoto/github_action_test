@@ -1,0 +1,24 @@
+name: execution_test
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: execution_test
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-go@v3
+        with:
+          go-version-file: ./go.mod # The Go version is determined by go.mod
+
+      - name: execution_test1
+        run: go run execution.go
+
+      - name: execution_test2
+        run: go run exec/execution2.go
+
+      - name: execution_test3
+        run: |
+          export DRINK="cola"
+          go run osVariable/osVariable.go
