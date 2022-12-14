@@ -13,7 +13,7 @@ jobs:
           go-version-file: ./go.mod # The Go version is determined by go.mod
 
       - name: execution_test1
-        run: go run execution.go
+        run: go run execution/execution.go
 
       - name: execution_test2
         run: go run exec/execution2.go
