@@ -10,7 +10,7 @@ jobs:
 
       - uses: actions/setup-go@v3
         with:
-          go-version-file: ./go.mod # The Go version is determined by go.mod
+          go-version-file: ./execution/go.mod # The Go version is determined by go.mod
 
       - name: execution_test1
         run: go run execution/execution.go
